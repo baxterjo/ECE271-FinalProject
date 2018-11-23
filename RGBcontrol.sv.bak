@@ -1,0 +1,13 @@
+module RGBcontrol(
+	input logic clk,
+	input int x,y,
+	output logic[3:0] VGA_R, VGA_G, VGA_B,
+	);
+	always_ff @(posedge clk){
+	begin
+		VGA_R <= (x % 15);
+		VGA_G <= (y % 15);
+		VGA_B <= (x / 15);
+	end
+	}
+endmodule // RGBcontrol 

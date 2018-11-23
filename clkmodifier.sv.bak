@@ -1,0 +1,12 @@
+module clkmodifier(
+	input logic clk, reset,
+	output logic clk25
+	);
+	//Cut the clock in half
+	always_ff @(posedge clk)
+	begin
+		if (reset){
+			clk25 = 0;
+		}
+		clk25 <= ~clk25;
+	end
