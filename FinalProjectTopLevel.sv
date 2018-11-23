@@ -1,4 +1,4 @@
-module Lab6TopLevel(
+module FinalProjectTopLevel(
 	input logic clk, reset,
 	output logic vsync, hsync,
 	output logic[3:0] VGA_R, VGA_G, VGA_B
