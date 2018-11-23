@@ -1,15 +1,24 @@
 module RGBcontrol(
 	input logic enable,
-	input int x,y,
+	input int Cx, Cy, Ox, Oy, Oh, Ow,
 	output logic[3:0] VGA_R, VGA_G, VGA_B
 	);
 	always_comb
 	begin
 		if (enable)
 		begin
-			VGA_R = x % 15;
-			VGA_G = y % 15;
-			VGA_B = y / 15;
+			if (Cx > Ox && Cx < Ox + Ow && Cy > Oy && Cy < Oy + Oh)
+			begin
+				VGA_R = Cx % 15;
+				VGA_G = Cy % 15;
+				VGA_B = Cy / 15;
+			end
+			else 
+			begin
+				VGA_R = 247 / 15;
+				VGA_G = 131 / 15;
+				VGA_B = 0;
+			end
 		end
 		else
 		begin

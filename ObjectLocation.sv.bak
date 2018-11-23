@@ -1,0 +1,25 @@
+module ObjectLocation(
+	input logic reset,
+	input logic [2:0] command,
+	output int Ox, Oy, Oh, Ow
+	);
+	
+	always_comb
+	begin
+		if(reset)
+		begin
+			Oh = 24;
+			Ow = 32;
+			Ox = (640 / 2) - (Ow / 2);
+			Oy = (480 / 2) - (Oh / 2);
+		end
+		case(command)
+			0:	Ox = Ox, Oy = Oy;
+			1:	Ox = Ox - 5;
+			2:	Ox = Ox + 5;
+			3:	Oy = Oy - 5;
+			4:	Oy = Ot + 5;
+			default: Ox = Ox, Oy = Oy;
+		endcase // command
+
+endmodule // ObjectLocation
