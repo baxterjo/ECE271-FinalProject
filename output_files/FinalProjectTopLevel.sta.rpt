@@ -1,5 +1,5 @@
 Timing Analyzer report for FinalProjectTopLevel
-Mon Nov 26 11:22:45 2018
+Mon Nov 26 15:48:19 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -96,8 +96,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  17.3%      ;
-;     Processors 3-4         ;  17.2%      ;
+;     Processor 2            ;  17.4%      ;
+;     Processors 3-4         ;  17.3%      ;
 +----------------------------+-------------+
 
 
@@ -109,18 +109,22 @@ refer to the applicable agreement for further details.
 ; clk                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                    ;
 ; clkDivider:clk0|modClk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clkDivider:clk0|modClk } ;
 ; clkDivider:clk1|modClk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clkDivider:clk1|modClk } ;
+; ps2clk                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ps2clk }                 ;
+; SPI_SNES:s0|SNESclock  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SPI_SNES:s0|SNESclock }  ;
 +------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
 
 
-+--------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                           ;
-+------------+-----------------+------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name             ; Note ;
-+------------+-----------------+------------------------+------+
-; 172.15 MHz ; 172.15 MHz      ; clk                    ;      ;
-; 218.91 MHz ; 218.91 MHz      ; clkDivider:clk0|modClk ;      ;
-; 298.6 MHz  ; 298.6 MHz       ; clkDivider:clk1|modClk ;      ;
-+------------+-----------------+------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                    ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name             ; Note                                                          ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; 177.9 MHz  ; 177.9 MHz       ; clk                    ;                                                               ;
+; 193.12 MHz ; 193.12 MHz      ; clkDivider:clk1|modClk ;                                                               ;
+; 207.17 MHz ; 207.17 MHz      ; clkDivider:clk0|modClk ;                                                               ;
+; 333.78 MHz ; 333.78 MHz      ; SPI_SNES:s0|SNESclock  ;                                                               ;
+; 341.53 MHz ; 250.0 MHz       ; ps2clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -129,9 +133,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------+--------+---------------+
 ; Clock                  ; Slack  ; End Point TNS ;
 +------------------------+--------+---------------+
-; clk                    ; -4.809 ; -203.245      ;
-; clkDivider:clk0|modClk ; -3.568 ; -391.911      ;
-; clkDivider:clk1|modClk ; -2.349 ; -104.733      ;
+; clkDivider:clk1|modClk ; -5.922 ; -337.777      ;
+; clk                    ; -4.621 ; -221.030      ;
+; clkDivider:clk0|modClk ; -3.827 ; -414.739      ;
+; SPI_SNES:s0|SNESclock  ; -1.996 ; -19.329       ;
+; ps2clk                 ; -1.928 ; -49.285       ;
 +------------------------+--------+---------------+
 
 
@@ -140,9 +146,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------+-------+---------------+
 ; Clock                  ; Slack ; End Point TNS ;
 +------------------------+-------+---------------+
-; clkDivider:clk0|modClk ; 0.323 ; 0.000         ;
-; clkDivider:clk1|modClk ; 0.538 ; 0.000         ;
-; clk                    ; 0.637 ; 0.000         ;
+; SPI_SNES:s0|SNESclock  ; 0.340 ; 0.000         ;
+; clkDivider:clk0|modClk ; 0.341 ; 0.000         ;
+; ps2clk                 ; 0.341 ; 0.000         ;
+; clk                    ; 0.625 ; 0.000         ;
+; clkDivider:clk1|modClk ; 0.638 ; 0.000         ;
 +------------------------+-------+---------------+
 
 
@@ -163,9 +171,11 @@ No paths to report.
 +------------------------+--------+-----------------+
 ; Clock                  ; Slack  ; End Point TNS   ;
 +------------------------+--------+-----------------+
-; clk                    ; -3.000 ; -95.598         ;
+; clk                    ; -3.000 ; -109.628        ;
+; ps2clk                 ; -3.000 ; -46.493         ;
 ; clkDivider:clk0|modClk ; -1.403 ; -183.793        ;
 ; clkDivider:clk1|modClk ; -1.403 ; -89.792         ;
+; SPI_SNES:s0|SNESclock  ; -1.403 ; -22.448         ;
 +------------------------+--------+-----------------+
 
 
@@ -175,15 +185,17 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                            ;
-+------------+-----------------+------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name             ; Note ;
-+------------+-----------------+------------------------+------+
-; 188.01 MHz ; 188.01 MHz      ; clk                    ;      ;
-; 237.81 MHz ; 237.81 MHz      ; clkDivider:clk0|modClk ;      ;
-; 331.79 MHz ; 331.79 MHz      ; clkDivider:clk1|modClk ;      ;
-+------------+-----------------+------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                     ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name             ; Note                                                          ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; 193.24 MHz ; 193.24 MHz      ; clk                    ;                                                               ;
+; 213.36 MHz ; 213.36 MHz      ; clkDivider:clk1|modClk ;                                                               ;
+; 224.16 MHz ; 224.16 MHz      ; clkDivider:clk0|modClk ;                                                               ;
+; 362.45 MHz ; 362.45 MHz      ; SPI_SNES:s0|SNESclock  ;                                                               ;
+; 368.19 MHz ; 250.0 MHz       ; ps2clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -192,9 +204,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------+--------+---------------+
 ; Clock                  ; Slack  ; End Point TNS ;
 +------------------------+--------+---------------+
-; clk                    ; -4.319 ; -180.595      ;
-; clkDivider:clk0|modClk ; -3.205 ; -349.097      ;
-; clkDivider:clk1|modClk ; -2.014 ; -88.054       ;
+; clkDivider:clk1|modClk ; -5.255 ; -305.145      ;
+; clk                    ; -4.175 ; -195.859      ;
+; clkDivider:clk0|modClk ; -3.461 ; -370.898      ;
+; SPI_SNES:s0|SNESclock  ; -1.759 ; -16.311       ;
+; ps2clk                 ; -1.716 ; -43.284       ;
 +------------------------+--------+---------------+
 
 
@@ -203,9 +217,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------+-------+---------------+
 ; Clock                  ; Slack ; End Point TNS ;
 +------------------------+-------+---------------+
-; clkDivider:clk0|modClk ; 0.289 ; 0.000         ;
-; clkDivider:clk1|modClk ; 0.487 ; 0.000         ;
-; clk                    ; 0.589 ; 0.000         ;
+; ps2clk                 ; 0.305 ; 0.000         ;
+; SPI_SNES:s0|SNESclock  ; 0.306 ; 0.000         ;
+; clkDivider:clk0|modClk ; 0.306 ; 0.000         ;
+; clk                    ; 0.577 ; 0.000         ;
+; clkDivider:clk1|modClk ; 0.591 ; 0.000         ;
 +------------------------+-------+---------------+
 
 
@@ -226,9 +242,11 @@ No paths to report.
 +------------------------+--------+----------------+
 ; Clock                  ; Slack  ; End Point TNS  ;
 +------------------------+--------+----------------+
-; clk                    ; -3.000 ; -95.598        ;
+; clk                    ; -3.000 ; -109.628       ;
+; ps2clk                 ; -3.000 ; -46.493        ;
 ; clkDivider:clk0|modClk ; -1.403 ; -183.793       ;
 ; clkDivider:clk1|modClk ; -1.403 ; -89.792        ;
+; SPI_SNES:s0|SNESclock  ; -1.403 ; -22.448        ;
 +------------------------+--------+----------------+
 
 
@@ -243,9 +261,11 @@ No synchronizer chains to report.
 +------------------------+--------+---------------+
 ; Clock                  ; Slack  ; End Point TNS ;
 +------------------------+--------+---------------+
-; clk                    ; -1.612 ; -48.596       ;
-; clkDivider:clk0|modClk ; -0.906 ; -88.265       ;
-; clkDivider:clk1|modClk ; -0.302 ; -6.384        ;
+; clkDivider:clk1|modClk ; -2.433 ; -147.611      ;
+; clk                    ; -1.533 ; -51.679       ;
+; clkDivider:clk0|modClk ; -1.029 ; -97.545       ;
+; ps2clk                 ; -0.286 ; -3.876        ;
+; SPI_SNES:s0|SNESclock  ; -0.230 ; -0.837        ;
 +------------------------+--------+---------------+
 
 
@@ -254,9 +274,11 @@ No synchronizer chains to report.
 +------------------------+-------+---------------+
 ; Clock                  ; Slack ; End Point TNS ;
 +------------------------+-------+---------------+
-; clkDivider:clk0|modClk ; 0.141 ; 0.000         ;
-; clkDivider:clk1|modClk ; 0.197 ; 0.000         ;
-; clk                    ; 0.245 ; 0.000         ;
+; ps2clk                 ; 0.147 ; 0.000         ;
+; SPI_SNES:s0|SNESclock  ; 0.148 ; 0.000         ;
+; clkDivider:clk0|modClk ; 0.148 ; 0.000         ;
+; clk                    ; 0.238 ; 0.000         ;
+; clkDivider:clk1|modClk ; 0.245 ; 0.000         ;
 +------------------------+-------+---------------+
 
 
@@ -277,9 +299,11 @@ No paths to report.
 +------------------------+--------+----------------+
 ; Clock                  ; Slack  ; End Point TNS  ;
 +------------------------+--------+----------------+
-; clk                    ; -3.000 ; -71.127        ;
+; clk                    ; -3.000 ; -81.759        ;
+; ps2clk                 ; -3.000 ; -35.540        ;
 ; clkDivider:clk0|modClk ; -1.000 ; -131.000       ;
 ; clkDivider:clk1|modClk ; -1.000 ; -64.000        ;
+; SPI_SNES:s0|SNESclock  ; -1.000 ; -16.000        ;
 +------------------------+--------+----------------+
 
 
@@ -294,14 +318,18 @@ No synchronizer chains to report.
 +-------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                   ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack        ; -4.809   ; 0.141 ; N/A      ; N/A     ; -3.000              ;
-;  clk                    ; -4.809   ; 0.245 ; N/A      ; N/A     ; -3.000              ;
-;  clkDivider:clk0|modClk ; -3.568   ; 0.141 ; N/A      ; N/A     ; -1.403              ;
-;  clkDivider:clk1|modClk ; -2.349   ; 0.197 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS         ; -699.889 ; 0.0   ; 0.0      ; 0.0     ; -369.183            ;
-;  clk                    ; -203.245 ; 0.000 ; N/A      ; N/A     ; -95.598             ;
-;  clkDivider:clk0|modClk ; -391.911 ; 0.000 ; N/A      ; N/A     ; -183.793            ;
-;  clkDivider:clk1|modClk ; -104.733 ; 0.000 ; N/A      ; N/A     ; -89.792             ;
+; Worst-case Slack        ; -5.922   ; 0.147 ; N/A      ; N/A     ; -3.000              ;
+;  SPI_SNES:s0|SNESclock  ; -1.996   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  clk                    ; -4.621   ; 0.238 ; N/A      ; N/A     ; -3.000              ;
+;  clkDivider:clk0|modClk ; -3.827   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  clkDivider:clk1|modClk ; -5.922   ; 0.245 ; N/A      ; N/A     ; -1.403              ;
+;  ps2clk                 ; -1.928   ; 0.147 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS         ; -1042.16 ; 0.0   ; 0.0      ; 0.0     ; -452.154            ;
+;  SPI_SNES:s0|SNESclock  ; -19.329  ; 0.000 ; N/A      ; N/A     ; -22.448             ;
+;  clk                    ; -221.030 ; 0.000 ; N/A      ; N/A     ; -109.628            ;
+;  clkDivider:clk0|modClk ; -414.739 ; 0.000 ; N/A      ; N/A     ; -183.793            ;
+;  clkDivider:clk1|modClk ; -337.777 ; 0.000 ; N/A      ; N/A     ; -89.792             ;
+;  ps2clk                 ; -49.285  ; 0.000 ; N/A      ; N/A     ; -46.493             ;
 +-------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -333,17 +361,16 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; ps2In               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; a[0]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; sel[0]              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; b[0]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; sel[1]              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; a[1]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; b[1]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; a[2]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; b[2]                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; reset               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; snesIn              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ps2clk              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ps2In               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -428,11 +455,16 @@ No synchronizer chains to report.
 +------------------------+------------------------+----------+----------+----------+----------+
 ; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------+------------------------+----------+----------+----------+----------+
-; clk                    ; clk                    ; 3168     ; 0        ; 0        ; 0        ;
+; clk                    ; clk                    ; 3267     ; 0        ; 0        ; 0        ;
 ; clkDivider:clk0|modClk ; clk                    ; 1        ; 1        ; 0        ; 0        ;
 ; clkDivider:clk1|modClk ; clk                    ; 1        ; 1        ; 0        ; 0        ;
+; SPI_SNES:s0|SNESclock  ; clk                    ; 1        ; 1        ; 0        ; 0        ;
 ; clkDivider:clk0|modClk ; clkDivider:clk0|modClk ; 7011     ; 0        ; 0        ; 0        ;
-; clkDivider:clk1|modClk ; clkDivider:clk1|modClk ; 1056     ; 0        ; 0        ; 0        ;
+; clkDivider:clk1|modClk ; clkDivider:clk1|modClk ; 1584     ; 0        ; 0        ; 0        ;
+; ps2clk                 ; clkDivider:clk1|modClk ; 0        ; 9984     ; 0        ; 0        ;
+; SPI_SNES:s0|SNESclock  ; clkDivider:clk1|modClk ; 3520     ; 0        ; 0        ; 0        ;
+; ps2clk                 ; ps2clk                 ; 0        ; 0        ; 0        ; 262      ;
+; SPI_SNES:s0|SNESclock  ; SPI_SNES:s0|SNESclock  ; 256      ; 0        ; 0        ; 0        ;
 +------------------------+------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -442,11 +474,16 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------+------------------------+----------+----------+----------+----------+
 ; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------+------------------------+----------+----------+----------+----------+
-; clk                    ; clk                    ; 3168     ; 0        ; 0        ; 0        ;
+; clk                    ; clk                    ; 3267     ; 0        ; 0        ; 0        ;
 ; clkDivider:clk0|modClk ; clk                    ; 1        ; 1        ; 0        ; 0        ;
 ; clkDivider:clk1|modClk ; clk                    ; 1        ; 1        ; 0        ; 0        ;
+; SPI_SNES:s0|SNESclock  ; clk                    ; 1        ; 1        ; 0        ; 0        ;
 ; clkDivider:clk0|modClk ; clkDivider:clk0|modClk ; 7011     ; 0        ; 0        ; 0        ;
-; clkDivider:clk1|modClk ; clkDivider:clk1|modClk ; 1056     ; 0        ; 0        ; 0        ;
+; clkDivider:clk1|modClk ; clkDivider:clk1|modClk ; 1584     ; 0        ; 0        ; 0        ;
+; ps2clk                 ; clkDivider:clk1|modClk ; 0        ; 9984     ; 0        ; 0        ;
+; SPI_SNES:s0|SNESclock  ; clkDivider:clk1|modClk ; 3520     ; 0        ; 0        ; 0        ;
+; ps2clk                 ; ps2clk                 ; 0        ; 0        ; 0        ; 262      ;
+; SPI_SNES:s0|SNESclock  ; SPI_SNES:s0|SNESclock  ; 256      ; 0        ; 0        ; 0        ;
 +------------------------+------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -470,8 +507,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 738   ; 738  ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 581   ; 581  ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
 ; Unconstrained Output Port Paths ; 1550  ; 1550 ;
 +---------------------------------+-------+------+
@@ -482,9 +519,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------+------------------------+------+-------------+
 ; Target                 ; Clock                  ; Type ; Status      ;
 +------------------------+------------------------+------+-------------+
+; SPI_SNES:s0|SNESclock  ; SPI_SNES:s0|SNESclock  ; Base ; Constrained ;
 ; clk                    ; clk                    ; Base ; Constrained ;
 ; clkDivider:clk0|modClk ; clkDivider:clk0|modClk ; Base ; Constrained ;
 ; clkDivider:clk1|modClk ; clkDivider:clk1|modClk ; Base ; Constrained ;
+; ps2clk                 ; ps2clk                 ; Base ; Constrained ;
 +------------------------+------------------------+------+-------------+
 
 
@@ -496,12 +535,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; a[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ps2In      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sel[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sel[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; snesIn     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -535,12 +573,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; a[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ps2In      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sel[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sel[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; snesIn     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -572,7 +609,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 26 11:22:41 2018
+    Info: Processing started: Mon Nov 26 15:48:12 2018
 Info: Command: quartus_sta FinalProject -c FinalProjectTopLevel
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -583,6 +620,8 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Fin
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clkDivider:clk1|modClk clkDivider:clk1|modClk
+    Info (332105): create_clock -period 1.000 -name ps2clk ps2clk
+    Info (332105): create_clock -period 1.000 -name SPI_SNES:s0|SNESclock SPI_SNES:s0|SNESclock
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name clkDivider:clk0|modClk clkDivider:clk0|modClk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -591,80 +630,98 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.809
+Info (332146): Worst-case setup slack is -5.922
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.809            -203.245 clk 
-    Info (332119):    -3.568            -391.911 clkDivider:clk0|modClk 
-    Info (332119):    -2.349            -104.733 clkDivider:clk1|modClk 
-Info (332146): Worst-case hold slack is 0.323
+    Info (332119):    -5.922            -337.777 clkDivider:clk1|modClk 
+    Info (332119):    -4.621            -221.030 clk 
+    Info (332119):    -3.827            -414.739 clkDivider:clk0|modClk 
+    Info (332119):    -1.996             -19.329 SPI_SNES:s0|SNESclock 
+    Info (332119):    -1.928             -49.285 ps2clk 
+Info (332146): Worst-case hold slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.323               0.000 clkDivider:clk0|modClk 
-    Info (332119):     0.538               0.000 clkDivider:clk1|modClk 
-    Info (332119):     0.637               0.000 clk 
+    Info (332119):     0.340               0.000 SPI_SNES:s0|SNESclock 
+    Info (332119):     0.341               0.000 clkDivider:clk0|modClk 
+    Info (332119):     0.341               0.000 ps2clk 
+    Info (332119):     0.625               0.000 clk 
+    Info (332119):     0.638               0.000 clkDivider:clk1|modClk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -95.598 clk 
+    Info (332119):    -3.000            -109.628 clk 
+    Info (332119):    -3.000             -46.493 ps2clk 
     Info (332119):    -1.403            -183.793 clkDivider:clk0|modClk 
     Info (332119):    -1.403             -89.792 clkDivider:clk1|modClk 
+    Info (332119):    -1.403             -22.448 SPI_SNES:s0|SNESclock 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.319
+Info (332146): Worst-case setup slack is -5.255
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.319            -180.595 clk 
-    Info (332119):    -3.205            -349.097 clkDivider:clk0|modClk 
-    Info (332119):    -2.014             -88.054 clkDivider:clk1|modClk 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):    -5.255            -305.145 clkDivider:clk1|modClk 
+    Info (332119):    -4.175            -195.859 clk 
+    Info (332119):    -3.461            -370.898 clkDivider:clk0|modClk 
+    Info (332119):    -1.759             -16.311 SPI_SNES:s0|SNESclock 
+    Info (332119):    -1.716             -43.284 ps2clk 
+Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 clkDivider:clk0|modClk 
-    Info (332119):     0.487               0.000 clkDivider:clk1|modClk 
-    Info (332119):     0.589               0.000 clk 
+    Info (332119):     0.305               0.000 ps2clk 
+    Info (332119):     0.306               0.000 SPI_SNES:s0|SNESclock 
+    Info (332119):     0.306               0.000 clkDivider:clk0|modClk 
+    Info (332119):     0.577               0.000 clk 
+    Info (332119):     0.591               0.000 clkDivider:clk1|modClk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -95.598 clk 
+    Info (332119):    -3.000            -109.628 clk 
+    Info (332119):    -3.000             -46.493 ps2clk 
     Info (332119):    -1.403            -183.793 clkDivider:clk0|modClk 
     Info (332119):    -1.403             -89.792 clkDivider:clk1|modClk 
+    Info (332119):    -1.403             -22.448 SPI_SNES:s0|SNESclock 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.612
+Info (332146): Worst-case setup slack is -2.433
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.612             -48.596 clk 
-    Info (332119):    -0.906             -88.265 clkDivider:clk0|modClk 
-    Info (332119):    -0.302              -6.384 clkDivider:clk1|modClk 
-Info (332146): Worst-case hold slack is 0.141
+    Info (332119):    -2.433            -147.611 clkDivider:clk1|modClk 
+    Info (332119):    -1.533             -51.679 clk 
+    Info (332119):    -1.029             -97.545 clkDivider:clk0|modClk 
+    Info (332119):    -0.286              -3.876 ps2clk 
+    Info (332119):    -0.230              -0.837 SPI_SNES:s0|SNESclock 
+Info (332146): Worst-case hold slack is 0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.141               0.000 clkDivider:clk0|modClk 
-    Info (332119):     0.197               0.000 clkDivider:clk1|modClk 
-    Info (332119):     0.245               0.000 clk 
+    Info (332119):     0.147               0.000 ps2clk 
+    Info (332119):     0.148               0.000 SPI_SNES:s0|SNESclock 
+    Info (332119):     0.148               0.000 clkDivider:clk0|modClk 
+    Info (332119):     0.238               0.000 clk 
+    Info (332119):     0.245               0.000 clkDivider:clk1|modClk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -71.127 clk 
+    Info (332119):    -3.000             -81.759 clk 
+    Info (332119):    -3.000             -35.540 ps2clk 
     Info (332119):    -1.000            -131.000 clkDivider:clk0|modClk 
     Info (332119):    -1.000             -64.000 clkDivider:clk1|modClk 
+    Info (332119):    -1.000             -16.000 SPI_SNES:s0|SNESclock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Mon Nov 26 11:22:45 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Mon Nov 26 15:48:19 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:10
 
 

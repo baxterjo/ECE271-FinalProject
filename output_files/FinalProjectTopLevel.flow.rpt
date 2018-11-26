@@ -1,5 +1,5 @@
 Flow report for FinalProjectTopLevel
-Mon Nov 26 11:22:45 2018
+Mon Nov 26 15:48:19 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 26 11:22:40 2018       ;
+; Flow Status                        ; Successful - Mon Nov 26 15:48:10 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FinalProjectTopLevel                        ;
 ; Top-level Entity Name              ; FinalProjectTopLevel                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,135 / 49,760 ( 4 % )                      ;
-;     Total combinational functions  ; 2,129 / 49,760 ( 4 % )                      ;
-;     Dedicated logic registers      ; 261 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 261                                         ;
-; Total pins                         ; 25 / 360 ( 7 % )                            ;
+; Total logic elements               ; 2,297 / 49,760 ( 5 % )                      ;
+;     Total combinational functions  ; 2,282 / 49,760 ( 5 % )                      ;
+;     Dedicated logic registers      ; 318 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 318                                         ;
+; Total pins                         ; 24 / 360 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 11/26/2018 11:22:00  ;
+; Start date & time ; 11/26/2018 15:47:21  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; FinalProjectTopLevel ;
 +-------------------+----------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88491852151119.154326012005096         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88491852151119.154327604015020         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4808 MB             ; 00:00:30                           ;
-; Fitter               ; 00:00:19     ; 1.2                     ; 5709 MB             ; 00:00:29                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4706 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 4855 MB             ; 00:00:05                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4808 MB             ; 00:00:28                           ;
+; Fitter               ; 00:00:25     ; 1.2                     ; 5723 MB             ; 00:00:45                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4710 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.5                     ; 4860 MB             ; 00:00:10                           ;
+; Total                ; 00:00:52     ; --                      ; --                  ; 00:01:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

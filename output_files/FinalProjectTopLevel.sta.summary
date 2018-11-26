@@ -2,33 +2,53 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'clkDivider:clk1|modClk'
+Slack : -5.922
+TNS   : -337.777
+
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.809
-TNS   : -203.245
+Slack : -4.621
+TNS   : -221.030
 
 Type  : Slow 1200mV 85C Model Setup 'clkDivider:clk0|modClk'
-Slack : -3.568
-TNS   : -391.911
+Slack : -3.827
+TNS   : -414.739
 
-Type  : Slow 1200mV 85C Model Setup 'clkDivider:clk1|modClk'
-Slack : -2.349
-TNS   : -104.733
+Type  : Slow 1200mV 85C Model Setup 'SPI_SNES:s0|SNESclock'
+Slack : -1.996
+TNS   : -19.329
 
-Type  : Slow 1200mV 85C Model Hold 'clkDivider:clk0|modClk'
-Slack : 0.323
+Type  : Slow 1200mV 85C Model Setup 'ps2clk'
+Slack : -1.928
+TNS   : -49.285
+
+Type  : Slow 1200mV 85C Model Hold 'SPI_SNES:s0|SNESclock'
+Slack : 0.340
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'clkDivider:clk1|modClk'
-Slack : 0.538
+Type  : Slow 1200mV 85C Model Hold 'clkDivider:clk0|modClk'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2clk'
+Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.637
+Slack : 0.625
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clkDivider:clk1|modClk'
+Slack : 0.638
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -95.598
+TNS   : -109.628
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2clk'
+Slack : -3.000
+TNS   : -46.493
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDivider:clk0|modClk'
 Slack : -1.403
@@ -38,33 +58,57 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDivider:clk1|modClk'
 Slack : -1.403
 TNS   : -89.792
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.319
-TNS   : -180.595
-
-Type  : Slow 1200mV 0C Model Setup 'clkDivider:clk0|modClk'
-Slack : -3.205
-TNS   : -349.097
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SPI_SNES:s0|SNESclock'
+Slack : -1.403
+TNS   : -22.448
 
 Type  : Slow 1200mV 0C Model Setup 'clkDivider:clk1|modClk'
-Slack : -2.014
-TNS   : -88.054
+Slack : -5.255
+TNS   : -305.145
 
-Type  : Slow 1200mV 0C Model Hold 'clkDivider:clk0|modClk'
-Slack : 0.289
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.175
+TNS   : -195.859
+
+Type  : Slow 1200mV 0C Model Setup 'clkDivider:clk0|modClk'
+Slack : -3.461
+TNS   : -370.898
+
+Type  : Slow 1200mV 0C Model Setup 'SPI_SNES:s0|SNESclock'
+Slack : -1.759
+TNS   : -16.311
+
+Type  : Slow 1200mV 0C Model Setup 'ps2clk'
+Slack : -1.716
+TNS   : -43.284
+
+Type  : Slow 1200mV 0C Model Hold 'ps2clk'
+Slack : 0.305
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'clkDivider:clk1|modClk'
-Slack : 0.487
+Type  : Slow 1200mV 0C Model Hold 'SPI_SNES:s0|SNESclock'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkDivider:clk0|modClk'
+Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.589
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkDivider:clk1|modClk'
+Slack : 0.591
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -95.598
+TNS   : -109.628
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2clk'
+Slack : -3.000
+TNS   : -46.493
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDivider:clk0|modClk'
 Slack : -1.403
@@ -74,33 +118,57 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDivider:clk1|modClk'
 Slack : -1.403
 TNS   : -89.792
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.612
-TNS   : -48.596
-
-Type  : Fast 1200mV 0C Model Setup 'clkDivider:clk0|modClk'
-Slack : -0.906
-TNS   : -88.265
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SPI_SNES:s0|SNESclock'
+Slack : -1.403
+TNS   : -22.448
 
 Type  : Fast 1200mV 0C Model Setup 'clkDivider:clk1|modClk'
-Slack : -0.302
-TNS   : -6.384
+Slack : -2.433
+TNS   : -147.611
 
-Type  : Fast 1200mV 0C Model Hold 'clkDivider:clk0|modClk'
-Slack : 0.141
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.533
+TNS   : -51.679
+
+Type  : Fast 1200mV 0C Model Setup 'clkDivider:clk0|modClk'
+Slack : -1.029
+TNS   : -97.545
+
+Type  : Fast 1200mV 0C Model Setup 'ps2clk'
+Slack : -0.286
+TNS   : -3.876
+
+Type  : Fast 1200mV 0C Model Setup 'SPI_SNES:s0|SNESclock'
+Slack : -0.230
+TNS   : -0.837
+
+Type  : Fast 1200mV 0C Model Hold 'ps2clk'
+Slack : 0.147
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clkDivider:clk1|modClk'
-Slack : 0.197
+Type  : Fast 1200mV 0C Model Hold 'SPI_SNES:s0|SNESclock'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkDivider:clk0|modClk'
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkDivider:clk1|modClk'
 Slack : 0.245
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -71.127
+TNS   : -81.759
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2clk'
+Slack : -3.000
+TNS   : -35.540
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDivider:clk0|modClk'
 Slack : -1.000
@@ -109,5 +177,9 @@ TNS   : -131.000
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDivider:clk1|modClk'
 Slack : -1.000
 TNS   : -64.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SPI_SNES:s0|SNESclock'
+Slack : -1.000
+TNS   : -16.000
 
 ------------------------------------------------------------

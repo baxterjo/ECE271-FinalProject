@@ -1,4 +1,4 @@
-module SNES_SPID(input logic clock,				// system clock
+module SPI_SNES(input logic clock,				// system clock
 					input logic data_in,
 					output logic [2:0] data		// data output to object location block
 );
@@ -46,7 +46,6 @@ module SNES_SPID(input logic clock,				// system clock
 			else if(SNEScount == 3) begin   //6 microsecond delay
 				pin3pulse <= 0;
 				value <= 0;
-				data_in <= 1;
 			end
 			
 			//4 is cycle 1
@@ -76,9 +75,6 @@ module SNES_SPID(input logic clock,				// system clock
 			//32 is cycle 15
 			//34 is cycle 16
 			
-			else if(SNEScount == 36) begin
-				data_in <= 0;
-			end
 			else if(SNEScount == 5556) begin     //5556 is the 60Hz, 16.67ms reset count
 				SNEScount <= 0;
 			end

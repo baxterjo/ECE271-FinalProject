@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
-					"strict" : false
-				},
-				{
 					"name" : "sel[1]",
 					"strict" : false
 				},
@@ -80,15 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
-					"strict" : false
-				},
-				{
 					"name" : "a[2]",
-					"strict" : false
-				},
-				{
-					"name" : "b[2]",
 					"strict" : false
 				},
 				{
@@ -97,6 +85,18 @@
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "snesIn",
+					"strict" : false
+				},
+				{
+					"name" : "ps2clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2In",
 					"strict" : false
 				}
 			]

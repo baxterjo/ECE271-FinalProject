@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectTopLevel
-Mon Nov 26 11:22:14 2018
+Mon Nov 26 15:47:35 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,17 +14,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: clkDivider:clk1
- 13. Parameter Settings for User Entity Instance: clkDivider:clk0
- 14. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Mod0
- 15. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Mod1
- 16. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Div0
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: clkDivider:clk1
+ 12. Parameter Settings for User Entity Instance: clkDivider:clk0
+ 13. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: RGBcontrol:RGB0|lpm_divide:Div0
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +49,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 26 11:22:14 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 26 15:47:35 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FinalProjectTopLevel                        ;
 ; Top-level Entity Name              ; FinalProjectTopLevel                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,129                                       ;
-;     Total combinational functions  ; 2,129                                       ;
-;     Dedicated logic registers      ; 261                                         ;
-; Total registers                    ; 261                                         ;
-; Total pins                         ; 25                                          ;
+; Total logic elements               ; 2,298                                       ;
+;     Total combinational functions  ; 2,282                                       ;
+;     Dedicated logic registers      ; 318                                         ;
+; Total registers                    ; 318                                         ;
+; Total pins                         ; 24                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -185,7 +184,8 @@ refer to the applicable agreement for further details.
 ; ObjectLocation.sv                ; yes             ; User SystemVerilog HDL File        ; C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv                      ;         ;
 ; multiplexer.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv                         ;         ;
 ; clkDivider.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv                          ;         ;
-; ps2_spid.sv                      ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/intelFPGA_lite/18.1/FinalProject/ps2_spid.sv                            ;         ;
+; spi_ps2kb.sv                     ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/intelFPGA_lite/18.1/FinalProject/spi_ps2kb.sv                           ;         ;
+; spi_snes.sv                      ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv                            ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
@@ -206,29 +206,29 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 2,129                  ;
+; Estimated Total logic elements              ; 2,298                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 2129                   ;
+; Total combinational functions               ; 2282                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 512                    ;
-;     -- 3 input functions                    ; 648                    ;
-;     -- <=2 input functions                  ; 969                    ;
+;     -- 4 input functions                    ; 567                    ;
+;     -- 3 input functions                    ; 653                    ;
+;     -- <=2 input functions                  ; 1062                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 1218                   ;
-;     -- arithmetic mode                      ; 911                    ;
+;     -- normal mode                          ; 1322                   ;
+;     -- arithmetic mode                      ; 960                    ;
 ;                                             ;                        ;
-; Total registers                             ; 261                    ;
-;     -- Dedicated logic registers            ; 261                    ;
+; Total registers                             ; 318                    ;
+;     -- Dedicated logic registers            ; 318                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 25                     ;
+; I/O pins                                    ; 24                     ;
 ;                                             ;                        ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; clkDivider:clk0|modClk ;
 ; Maximum fan-out                             ; 132                    ;
-; Total fan-out                               ; 6742                   ;
+; Total fan-out                               ; 7307                   ;
 ; Average fan-out                             ; 2.76                   ;
 +---------------------------------------------+------------------------+
 
@@ -238,63 +238,46 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                ; Entity Name          ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |FinalProjectTopLevel                    ; 2129 (1)            ; 261 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |FinalProjectTopLevel                                                                                                              ; FinalProjectTopLevel ; work         ;
-;    |ObjectLocation:L0|                   ; 67 (67)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|ObjectLocation:L0                                                                                            ; ObjectLocation       ; work         ;
-;    |RGBcontrol:RGB0|                     ; 1763 (207)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0                                                                                              ; RGBcontrol           ; work         ;
+; |FinalProjectTopLevel                    ; 2282 (1)            ; 318 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |FinalProjectTopLevel                                                                                                              ; FinalProjectTopLevel ; work         ;
+;    |ObjectLocation:L0|                   ; 131 (131)           ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|ObjectLocation:L0                                                                                            ; ObjectLocation       ; work         ;
+;    |RGBcontrol:RGB0|                     ; 1770 (208)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0                                                                                              ; RGBcontrol           ; work         ;
 ;       |lpm_divide:Div0|                  ; 480 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Div0                                                                              ; lpm_divide           ; work         ;
 ;          |lpm_divide_fbo:auto_generated| ; 480 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo       ; work         ;
 ;             |abs_divider_kbg:divider|    ; 480 (4)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg      ; work         ;
 ;                |alt_u_div_she:divider|   ; 476 (476)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she        ; work         ;
-;       |lpm_divide:Mod0|                  ; 535 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0                                                                              ; lpm_divide           ; work         ;
-;          |lpm_divide_i3o:auto_generated| ; 535 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated                                                ; lpm_divide_i3o       ; work         ;
-;             |abs_divider_kbg:divider|    ; 535 (4)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg      ; work         ;
+;       |lpm_divide:Mod0|                  ; 541 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0                                                                              ; lpm_divide           ; work         ;
+;          |lpm_divide_i3o:auto_generated| ; 541 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated                                                ; lpm_divide_i3o       ; work         ;
+;             |abs_divider_kbg:divider|    ; 541 (4)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg      ; work         ;
 ;                |alt_u_div_she:divider|   ; 486 (486)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she        ; work         ;
-;                |lpm_abs_8b9:my_abs_num|  ; 45 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9          ; work         ;
+;                |lpm_abs_8b9:my_abs_num|  ; 51 (51)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9          ; work         ;
 ;       |lpm_divide:Mod1|                  ; 541 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod1                                                                              ; lpm_divide           ; work         ;
 ;          |lpm_divide_i3o:auto_generated| ; 541 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod1|lpm_divide_i3o:auto_generated                                                ; lpm_divide_i3o       ; work         ;
 ;             |abs_divider_kbg:divider|    ; 541 (4)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg      ; work         ;
 ;                |alt_u_div_she:divider|   ; 486 (486)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she        ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|  ; 51 (51)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|RGBcontrol:RGB0|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9          ; work         ;
-;    |XYcounter:X0|                        ; 207 (207)           ; 131 (131)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|XYcounter:X0                                                                                                 ; XYcounter            ; work         ;
+;    |SPI_PS2KB:p0|                        ; 30 (30)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|SPI_PS2KB:p0                                                                                                 ; SPI_PS2KB            ; work         ;
+;    |SPI_SNES:s0|                         ; 50 (50)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|SPI_SNES:s0                                                                                                  ; SPI_SNES             ; work         ;
+;    |XYcounter:X0|                        ; 204 (204)           ; 131 (131)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|XYcounter:X0                                                                                                 ; XYcounter            ; work         ;
 ;    |clkDivider:clk0|                     ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|clkDivider:clk0                                                                                              ; clkDivider           ; work         ;
 ;    |clkDivider:clk1|                     ; 44 (44)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|clkDivider:clk1                                                                                              ; clkDivider           ; work         ;
-;    |multiplexer:mux0|                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|multiplexer:mux0                                                                                             ; multiplexer          ; work         ;
+;    |multiplexer:mux0|                    ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProjectTopLevel|multiplexer:mux0                                                                                             ; multiplexer          ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; ObjectLocation:L0|Ow[0..4]             ; Stuck at GND due to stuck port data_in      ;
-; ObjectLocation:L0|Ow[5]                ; Stuck at VCC due to stuck port data_in      ;
-; ObjectLocation:L0|Ow[6..31]            ; Stuck at GND due to stuck port data_in      ;
-; ObjectLocation:L0|Oh[0..2]             ; Stuck at GND due to stuck port data_in      ;
-; ObjectLocation:L0|Oh[3,4]              ; Stuck at VCC due to stuck port data_in      ;
-; ObjectLocation:L0|Oh[5..31]            ; Stuck at GND due to stuck port data_in      ;
-; PS2_SPID:p0|started                    ; Stuck at GND due to stuck port data_in      ;
-; PS2_SPID:p0|stored[1]                  ; Stuck at GND due to stuck port clock_enable ;
-; PS2_SPID:p0|count[0..3]                ; Stuck at GND due to stuck port clock_enable ;
-; PS2_SPID:p0|prev[0..7]                 ; Stuck at GND due to stuck port clock_enable ;
-; PS2_SPID:p0|stored[2..8]               ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 85 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                               ;
-+---------------------+---------------------------+-----------------------------------------------------------------------------------------+
-; Register name       ; Reason for Removal        ; Registers Removed due to This Register                                                  ;
-+---------------------+---------------------------+-----------------------------------------------------------------------------------------+
-; PS2_SPID:p0|started ; Stuck at GND              ; PS2_SPID:p0|stored[1], PS2_SPID:p0|count[3], PS2_SPID:p0|count[2],                      ;
-;                     ; due to stuck port data_in ; PS2_SPID:p0|count[1], PS2_SPID:p0|count[0], PS2_SPID:p0|prev[7], PS2_SPID:p0|prev[6],   ;
-;                     ;                           ; PS2_SPID:p0|prev[5], PS2_SPID:p0|prev[4], PS2_SPID:p0|prev[3], PS2_SPID:p0|prev[2],     ;
-;                     ;                           ; PS2_SPID:p0|prev[1], PS2_SPID:p0|prev[0], PS2_SPID:p0|stored[2], PS2_SPID:p0|stored[3], ;
-;                     ;                           ; PS2_SPID:p0|stored[4], PS2_SPID:p0|stored[5], PS2_SPID:p0|stored[6],                    ;
-;                     ;                           ; PS2_SPID:p0|stored[7], PS2_SPID:p0|stored[8]                                            ;
-+---------------------+---------------------------+-----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ObjectLocation:L0|Ow[0..4]             ; Stuck at GND due to stuck port data_in ;
+; ObjectLocation:L0|Ow[5]                ; Stuck at VCC due to stuck port data_in ;
+; ObjectLocation:L0|Ow[6..31]            ; Stuck at GND due to stuck port data_in ;
+; ObjectLocation:L0|Oh[0..2]             ; Stuck at GND due to stuck port data_in ;
+; ObjectLocation:L0|Oh[3,4]              ; Stuck at VCC due to stuck port data_in ;
+; ObjectLocation:L0|Oh[5..31]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 64 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -302,31 +285,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 261   ;
+; Total registers                              ; 318   ;
 ; Number of registers using Synchronous Clear  ; 123   ;
 ; Number of registers using Synchronous Load   ; 96    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 127   ;
+; Number of registers using Clock Enable       ; 160   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|clkDivider:clk0|counter[9] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|clkDivider:clk1|counter[5] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|x[25]         ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|y[7]          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|vcount[10]    ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |FinalProjectTopLevel|ObjectLocation:L0|Oy[14]   ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |FinalProjectTopLevel|ObjectLocation:L0|Ox[17]   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |FinalProjectTopLevel|RGBcontrol:RGB0|VGA_B[2]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FinalProjectTopLevel|multiplexer:mux0|Mux0      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|clkDivider:clk0|counter[26] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|clkDivider:clk1|counter[7]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|x[27]          ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|y[18]          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FinalProjectTopLevel|XYcounter:X0|vcount[18]     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |FinalProjectTopLevel|ObjectLocation:L0|Oy[7]     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |FinalProjectTopLevel|ObjectLocation:L0|Ox[24]    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |FinalProjectTopLevel|RGBcontrol:RGB0|VGA_R[3]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FinalProjectTopLevel|multiplexer:mux0|Mux0       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -423,27 +406,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 261                         ;
-;     ENA               ; 36                          ;
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 318                         ;
+;     ENA               ; 69                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 64                          ;
 ;     SCLR              ; 64                          ;
 ;     SCLR SLD          ; 32                          ;
-;     plain             ; 38                          ;
-; cycloneiii_lcell_comb ; 2129                        ;
-;     arith             ; 911                         ;
-;         2 data inputs ; 304                         ;
-;         3 data inputs ; 607                         ;
-;     normal            ; 1218                        ;
+;     plain             ; 62                          ;
+; cycloneiii_lcell_comb ; 2282                        ;
+;     arith             ; 960                         ;
+;         2 data inputs ; 382                         ;
+;         3 data inputs ; 578                         ;
+;     normal            ; 1322                        ;
 ;         0 data inputs ; 88                          ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 569                         ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 512                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 578                         ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 567                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 89.50                       ;
-; Average LUT depth     ; 57.80                       ;
+; Average LUT depth     ; 53.60                       ;
 +-----------------------+-----------------------------+
 
 
@@ -462,7 +445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 26 11:21:59 2018
+    Info: Processing started: Mon Nov 26 15:47:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProjectTopLevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -483,16 +466,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file clkdivi
     Info (12023): Found entity 1: clkDivider File: C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv Line: 1
 Warning (12019): Can't analyze file -- file IRDecoder.sv is missing
 Info (12127): Elaborating entity "FinalProjectTopLevel" for the top level hierarchy
-Warning (12125): Using design file ps2_spid.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: PS2_SPID File: C:/intelFPGA_lite/18.1/FinalProject/ps2_spid.sv Line: 1
-Info (12128): Elaborating entity "PS2_SPID" for hierarchy "PS2_SPID:p0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at ps2_spid.sv(20): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/ps2_spid.sv Line: 20
-Info (12128): Elaborating entity "multiplexer" for hierarchy "multiplexer:mux0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 16
-Info (12128): Elaborating entity "ObjectLocation" for hierarchy "ObjectLocation:L0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 17
-Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clk1" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 18
-Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clk0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 19
-Info (12128): Elaborating entity "XYcounter" for hierarchy "XYcounter:X0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 20
-Info (12128): Elaborating entity "RGBcontrol" for hierarchy "RGBcontrol:RGB0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 21
+Warning (12125): Using design file spi_ps2kb.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SPI_PS2KB File: C:/intelFPGA_lite/18.1/FinalProject/spi_ps2kb.sv Line: 1
+Info (12128): Elaborating entity "SPI_PS2KB" for hierarchy "SPI_PS2KB:p0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at spi_ps2kb.sv(47): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/18.1/FinalProject/spi_ps2kb.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at spi_ps2kb.sv(49): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/spi_ps2kb.sv Line: 49
+Warning (12125): Using design file spi_snes.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SPI_SNES File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 1
+Info (12128): Elaborating entity "SPI_SNES" for hierarchy "SPI_SNES:s0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 16
+Warning (10036): Verilog HDL or VHDL warning at spi_snes.sv(9): object "pin3pulse" assigned a value but never read File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(36): truncated value with size 32 to match size of target (9) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(41): truncated value with size 32 to match size of target (12) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 41
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(57): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(60): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(63): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at spi_snes.sv(66): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 66
+Info (10264): Verilog HDL Case Statement information at spi_snes.sv(85): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/FinalProject/spi_snes.sv Line: 85
+Info (12128): Elaborating entity "multiplexer" for hierarchy "multiplexer:mux0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 17
+Info (12128): Elaborating entity "ObjectLocation" for hierarchy "ObjectLocation:L0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 18
+Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clk1" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 19
+Info (12128): Elaborating entity "clkDivider" for hierarchy "clkDivider:clk0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 20
+Info (12128): Elaborating entity "XYcounter" for hierarchy "XYcounter:X0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 21
+Info (12128): Elaborating entity "RGBcontrol" for hierarchy "RGBcontrol:RGB0" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at RGBcontrol.sv(12): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv Line: 12
 Warning (10230): Verilog HDL assignment warning at RGBcontrol.sv(13): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at RGBcontrol.sv(14): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv Line: 14
@@ -537,16 +532,14 @@ Info (13014): Ignored 93 buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ps2In" File: C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv Line: 2
-Info (21057): Implemented 2154 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Info (21057): Implemented 2323 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 2129 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info (21061): Implemented 2299 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Mon Nov 26 11:22:14 2018
+    Info: Processing ended: Mon Nov 26 15:47:35 2018
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:28
 
 
