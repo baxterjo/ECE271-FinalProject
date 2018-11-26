@@ -60,15 +60,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "c[1]",
-					"strict" : false
-				},
-				{
-					"name" : "b[1]",
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
 					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
@@ -80,27 +80,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "c[0]",
-					"strict" : false
-				},
-				{
-					"name" : "b[0]",
-					"strict" : false
-				},
-				{
-					"name" : "a[0]",
-					"strict" : false
-				},
-				{
-					"name" : "c[2]",
-					"strict" : false
-				},
-				{
-					"name" : "b[2]",
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
 					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
 					"strict" : false
 				},
 				{

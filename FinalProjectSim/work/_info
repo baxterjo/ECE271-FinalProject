@@ -1,0 +1,184 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Jordan Baxter/Dropbox/College/ECE 272/Lab 6 Sim
+vclkDivider
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1543260661
+!i10b 1
+!s100 fQTSEcbgk501`[RZ?_mda2
+IN[cmDKHdAB=oAo11W]h`D1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 clkDivider_sv_unit
+S1
+Z3 dC:/intelFPGA_lite/18.1/FinalProject/FinalProjectSim
+w1543007606
+8C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv
+FC:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1543260661.000000
+!s107 C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+nclk@divider
+vFinalProjectTopLevel
+R0
+Z8 !s110 1543260662
+!i10b 1
+!s100 >33`9O27mD1HXOLL8N6fV3
+I;EcI73n1b251b;BWMegVY0
+R2
+!s105 FinalProjectTopLevel_sv_unit
+S1
+R3
+w1543260073
+8C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv
+FC:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1543260662.000000
+!s107 C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv|
+!i113 1
+R6
+R7
+n@final@project@top@level
+vmultiplexer
+R0
+R8
+!i10b 1
+!s100 hM6zNToVH6F?5ZWWm899>2
+IjILDI4iTj9jRI9LMla0[d3
+R2
+!s105 multiplexer_sv_unit
+S1
+R3
+w1543003423
+8C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv
+FC:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv|
+!i113 1
+R6
+R7
+vObjectLocation
+R0
+R8
+!i10b 1
+!s100 IhjznoBCiceaP>Ka7XmS53
+IL;9eMXO0LZfIY2[;T8dSF1
+R2
+!s105 ObjectLocation_sv_unit
+S1
+R3
+w1543001021
+8C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv
+FC:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv|
+!i113 1
+R6
+R7
+n@object@location
+vPS2_SPID
+R0
+R8
+!i10b 1
+!s100 oaGh:EhG8@]d2_>Gbd:]R1
+Ik^J>3lQ>dWeokT3TP6l6D0
+R2
+!s105 PS2_SPID_sv_unit
+S1
+R3
+w1543260111
+8C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv
+FC:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv|
+!i113 1
+R6
+R7
+n@p@s2_@s@p@i@d
+vRGBcontrol
+R0
+R8
+!i10b 1
+!s100 eI9k3hF`5U8VoJLAL1hc50
+IAWJ_[XkSW`2oNbYUc<NFP0
+R2
+!s105 RGBcontrol_sv_unit
+S1
+R3
+w1543000138
+8C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv
+FC:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv|
+!i113 1
+R6
+R7
+n@r@g@bcontrol
+vXYcounter
+R0
+R1
+!i10b 1
+!s100 AH7JV42nUJFdFk10W?S083
+I8F:bL9QW?JjoGV3C4h:hg3
+R2
+!s105 XYcounter_sv_unit
+S1
+R3
+w1542762932
+8C:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv
+FC:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv|
+!i113 1
+R6
+R7
+n@x@ycounter

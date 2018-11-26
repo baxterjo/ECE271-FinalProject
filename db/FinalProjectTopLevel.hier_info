@@ -1,9 +1,10 @@
 |FinalProjectTopLevel
-clk => clk.IN2
+clk => clk.IN3
 reset => _.IN1
 reset => _.IN1
 reset => _.IN1
 reset => _.IN1
+ps2In => ps2In.IN1
 sel[0] => sel[0].IN1
 sel[1] => sel[1].IN1
 a[0] => a[0].IN1
@@ -12,9 +13,6 @@ a[2] => a[2].IN1
 b[0] => b[0].IN1
 b[1] => b[1].IN1
 b[2] => b[2].IN1
-c[0] => c[0].IN1
-c[1] => c[1].IN1
-c[2] => c[2].IN1
 vsync <= XYcounter:X0.port2
 hsync <= XYcounter:X0.port3
 VGA_R[0] <= RGBcontrol:RGB0.port7
@@ -29,6 +27,41 @@ VGA_B[0] <= RGBcontrol:RGB0.port9
 VGA_B[1] <= RGBcontrol:RGB0.port9
 VGA_B[2] <= RGBcontrol:RGB0.port9
 VGA_B[3] <= RGBcontrol:RGB0.port9
+
+
+|FinalProjectTopLevel|PS2_SPID:p0
+clock => prev[0].CLK
+clock => prev[1].CLK
+clock => prev[2].CLK
+clock => prev[3].CLK
+clock => prev[4].CLK
+clock => prev[5].CLK
+clock => prev[6].CLK
+clock => prev[7].CLK
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+clock => stored[1].CLK
+clock => stored[2].CLK
+clock => stored[3].CLK
+clock => stored[4].CLK
+clock => stored[5].CLK
+clock => stored[6].CLK
+clock => stored[7].CLK
+clock => stored[8].CLK
+clock => started.CLK
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data_in => stored.DATAB
+data[0] <= <GND>
+data[1] <= always1.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= <GND>
 
 
 |FinalProjectTopLevel|multiplexer:mux0
