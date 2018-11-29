@@ -7,7 +7,7 @@ module RGBcontrol(
 	begin
 		if (enable)
 		begin
-			if (Cx > Ox && Cx < Ox + Ow && Cy > Oy && Cy < Oy + Oh)
+			if (Cx > Ox && Cx < (Ox + Ow) && Cy > Oy && Cy < (Oy + Oh))
 			begin
 				VGA_R = Cx % 15;
 				VGA_G = Cy % 15;
@@ -15,8 +15,8 @@ module RGBcontrol(
 			end
 			else 
 			begin
-				VGA_R = 247 / 15;
-				VGA_G = 131 / 15;
+				VGA_R = 247*15/255;
+				VGA_G = 131*15/255;
 				VGA_B = 0;
 			end
 		end
