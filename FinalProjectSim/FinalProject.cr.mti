@@ -1,23 +1,9 @@
-C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv {1 {vlog -work work -sv -stats=none {C:\intelFPGA_lite\18.1\FinalProject\RGBcontrol.sv}
+C:/intelFPGA_lite/18.1/FinalProject/SPI_SNES.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/SPI_SNES.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module RGBcontrol
+-- Compiling module SPI_SNES
 
 Top level modules:
-	RGBcontrol
-
-} {} {}} C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module PS2_SPID
-
-Top level modules:
-	PS2_SPID
-
-} {} {}} C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/ObjectLocation.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ObjectLocation
-
-Top level modules:
-	ObjectLocation
+	SPI_SNES
 
 } {} {}} C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/FinalProjectTopLevel.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -26,19 +12,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	FinalProjectTopLevel
 
-} {} {}} C:/intelFPGA_lite/18.1/FinalProject/SPI_SNES.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/SPI_SNES.sv
+} {} {}} C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/PS2_SPID.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module SPI_SNES
+-- Compiling module PS2_SPID
 
 Top level modules:
-	SPI_SNES
+	PS2_SPID
 
-} {} {}} C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv
+} {} {}} C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/RGBcontrol.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module clkDivider
+-- Compiling module RGBcontrol
 
 Top level modules:
-	clkDivider
+	RGBcontrol
+
+} {} {}} C:/intelFPGA_lite/18.1/FinalProject/SPI_PS2KB.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/SPI_PS2KB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SPI_PS2KB
+
+Top level modules:
+	SPI_PS2KB
 
 } {} {}} C:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/XYcounter.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -47,12 +40,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	XYcounter
 
-} {} {}} C:/intelFPGA_lite/18.1/FinalProject/SPI_PS2KB.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/SPI_PS2KB.sv
+} {} {}} C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/clkDivider.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module SPI_PS2KB
+-- Compiling module clkDivider
 
 Top level modules:
-	SPI_PS2KB
+	clkDivider
 
 } {} {}} C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/FinalProject/multiplexer.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
